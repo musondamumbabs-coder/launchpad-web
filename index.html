@@ -82,12 +82,27 @@
                     <button type="submit" class="btn-action btn-email-submit">✉️ Send via Email</button>
                 </div>
             </form>
-
             <div class="direct-call-wrapper">
                 <p>Or give us a direct phone call: <a href="tel:+260765692963" class="accent">+260 765 692 963</a></p>
             </div>
         </div>
     </section>
+    <script>
+function sendToWhatsApp() {
+  var name = document.getElementById("cf-name").value || "Not provided";
+  var phone = document.getElementById("cf-phone").value || "Not provided";
+  var service = document.getElementById("cf-service").value || "Not specified";
+  var location = document.getElementById("cf-location").value || "Not provided";
+  var message = document.getElementById("cf-message").value || "No additional details";
+  var text = "Hi BLume Power Technologies!%0A%0A"
+    + "*Name:* " + encodeURIComponent(name) + "%0A"
+    + "*Phone:* " + encodeURIComponent(phone) + "%0A"
+    + "*Service needed:* " + encodeURIComponent(service) + "%0A"
+    + "*Location:* " + encodeURIComponent(location) + "%0A"
+    + "*Details:* " + encodeURIComponent(message);
+  window.open("https://wa.me/260765692963?text=" + text, "_blank");
+}
+</script>
 
     <!-- Footer -->
     <footer>
